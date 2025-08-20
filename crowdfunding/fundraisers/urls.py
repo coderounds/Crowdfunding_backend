@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import FundraiserList, FundraiserDetail
+from . import views
 
 urlpatterns = [
-    path('', FundraiserList.as_view(), name='fundraiser-list'),
-    path('<int:pk>/', FundraiserDetail.as_view(), name='fundraiser-detail'),
+    path('fundraisers/',views.FundraiserList.as_view()),
+    path('fundraisers/<int:pk>/',views.FundraiserDetail.as_view()),
+    path('pledges/',views.PledgeList.as_view())
 ]
