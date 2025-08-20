@@ -1,6 +1,6 @@
 # Crowdfunding Back End
 
-Mary Kanyingi
+Mary Kanyingi  #superuser, myemail,superuser001.
 
 ## Planning:
 
