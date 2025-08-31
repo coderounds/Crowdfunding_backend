@@ -13,3 +13,12 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
 
 # Custom permission for Pledge supporter
+class IsSupporterOrReadOnly(permissions.BasePermission):
+    """
+    Custom permission to only allow the supporter of a pledge to edit it.
+    """
+    def has_object_permission(self, request, view, obj):
+        
+        if request.method in permissions.SAFE_METHODS:
+            return True
+        return obj.supporter == request.user # Write permissions are only allowed to the supporter of the pledge
