@@ -13,8 +13,6 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
 
 # Custom permission for Pledge supporter
-
-# Custom permission for Pledge supporter
 class IsSupporterOrReadOnly(permissions.BasePermission):
     """
     Custom permission to only allow the supporter of a pledge to edit it.
